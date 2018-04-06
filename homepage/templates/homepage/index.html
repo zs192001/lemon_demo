@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lemon</title>
+	{% load static %}
+	<link rel="shortcut icon" href="{% static 'homepage/favicon.ico' %}"/>
+  </head>
+
+  <body>
+	<h1>This is home page!</h1>
+	<li><a href={% url 'blog:index' %}>Blog</a></li>
+	<!---
+	<li><a href={% url 'polls:index' %}>Polls</a></li>
+	--->
+  </body>
+
+</html>

@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% if latest_blog_list %}
+    <ul>
+    {% for blog in latest_blog_list %}
+      <li><a href="{% url 'blog:detail' blog.id %}">{{ blog.blog_title }}</a></li>
+	  <p>
+	  {{ blog.blog_text|truncatechars:140 }}
+	  </p>
+    {% endfor %}
+    </ul>
+  {% else %}
+      <p>No blogs are available.</p>
+  {% endif %}
+{% endblock %}
